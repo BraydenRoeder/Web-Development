@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Many Fingers?</title>
+</head>
+<body>
+
+    <h3>How many fingers am I holding up?</h3>
+
+    <input type="text" id="guess">
+
+    <button id="guessButton">Guess!</button>
+
+
+    <script>
+
+        document.getElementById("guessButton").onclick = ()=> {
+
+            let correct = Math.floor(Math.random() * 6);
+         
+            let guess = document.getElementById("guess").value;
+
+            if(guess == correct){
+                alert("You guessed it, the number was " + correct);
+            }
+            else{
+                alert("Nope! The number was " + correct);
+            }
+        }
+
+
+    </script>
+    
+</body>
+</html>
