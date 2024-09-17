@@ -130,13 +130,13 @@ h1{
     background-position: center;
 }
 
-.bbc-project{
+.reaction-tester{
     width: 400px;
     height: 400px;
     background: white;
     position: relative;
     border-radius: 10px;
-    background-image: url(coming-soon.jpg);
+    background-image: url(light-speed.jpg);
     margin: 20px;
     background-size: cover;
     background-position: center;
