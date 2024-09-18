@@ -1,4 +1,4 @@
-# Welcome to My Portfolio Repository! 👋
+# Welcome to My Personal Repository! 👋
 
 This repository showcases my personal projects and skills as a computer science graduate. It's a collection of web development, programming, and game design projects that demonstrate my proficiency and passion for creating engaging and efficient software solutions.
 
