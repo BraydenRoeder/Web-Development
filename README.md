@@ -7,6 +7,8 @@ This repository showcases my personal projects and skills as a computer science 
 - **`css/`**
 - **`javascript/`**
 - **`jQuery/`**
+- **`bootstrap/`**
+- **`php/`**
 
 ## 🚀 Quick Start
 
