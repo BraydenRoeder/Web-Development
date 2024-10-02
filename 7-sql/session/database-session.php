@@ -1,8 +1,7 @@
 <?php
 
-// Enable error reporting for debugging
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+session_start();
+
 
 if(array_key_exists('email', $_POST) OR array_key_exists('password', $_POST)){
     $link = mysqli_connect("localhost", "root", "", "test");
@@ -35,7 +34,8 @@ if(array_key_exists('email', $_POST) OR array_key_exists('password', $_POST)){
             $query = "INSERT INTO users (email, password) VALUES ('$email', '$password')";  
             
             if(mysqli_query($link, $query)){
-                echo "<p>You have signed up.</p>";
+                $_SESSION['email'] = $_POST['email'];
+                header('Location: session.php');
             }
             else{
                 echo "<p> There was a problem signing you up! Please try again later</p>";
@@ -45,25 +45,3 @@ if(array_key_exists('email', $_POST) OR array_key_exists('password', $_POST)){
 }
 
 ?>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up Form</title>
-</head>
-<body>
-    <form method = "POST">
-
-        <label for="email">Email:</label>
-        <input name="email" type="text" placeholder="email address">
-        <label for="password">Password:</label>
-        <input name="password" type="password" placeholder="password">
-
-        <input type="submit" value="sign up!">
-
-    </form>
-</body>
-</html>
