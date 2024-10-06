@@ -12,6 +12,7 @@
         header("Location: loggedinpage.php");
     }// End test for logout query string
 
+    
     if(array_key_exists("submit", $_POST)){
 
         $link = mysqli_connect("localhost", "root", "", "secret_diary");
@@ -67,6 +68,7 @@
                     }// end if for successful/failed sign up.
                 }// End mysqli_num_rows test.
             }
+            
             else{
                 $query = "SELECT * FROM users WHERE email = '" . $emailAddress . "'";
                 $result = mysqli_query($link, $query);
@@ -115,27 +117,31 @@
 
     <div id="error"><?php echo $error; ?></div>
     
-    <!-- sign up form -->
-    <form method="POST">
+    <div class="container">
 
-        <input type="email" name="email" placeholder="Your email">
-        <input type="password" name="password" placeholder="password">
-        <input type="checkbox" name="stayLoggedIn" value="1">
-        <input type="hidden" name="signUp" value="1">
-        <input type="submit" name="submit" value="sign up!">
+        <!-- sign up form -->
+        <form method="POST">
 
-    </form>
+                <input type="email" name="email" placeholder="Your email">
+                <input type="password" name="password" placeholder="password">
+                <input type="checkbox" name="stayLoggedIn" value="1">
+                <input type="hidden" name="signUp" value="1">
+                <input type="submit" name="submit" value="sign up!">
 
-    <!-- log in form -->
-    <form method="POST">
+        </form>
 
-        <input type="email" name="email" placeholder="Your email">
-        <input type="password" name="password" placeholder="password">
-        <input type="checkbox" name="stayLoggedIn" value="1">
-        <input type="hidden" name="signUp" value="0">
-        <input type="submit" name="submit" value="Log In!">
+        <!-- log in form -->
+        <form method="POST">
 
-    </form>
+            <input type="email" name="email" placeholder="Your email">
+            <input type="password" name="password" placeholder="password">
+            <input type="checkbox" name="stayLoggedIn" value="1">
+            <input type="hidden" name="signUp" value="0">
+            <input type="submit" name="submit" value="Log In!">
+
+        </form>
+
+    </div>
 
 </body>
 </html>
