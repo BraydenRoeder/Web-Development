@@ -9,10 +9,12 @@ This repository showcases my personal projects and skills as a computer science 
 - **`jQuery/`**
 - **`bootstrap/`**
 - **`php/`**
+- **`sql/`**
+- **`api/`**
 
 ## 🚀 Quick Start
 
-To quickly view my portfolio and see all my projects:
+To quickly view my portfolio and see a few of my projects:
 
 1. Clone or download this repository.
 2. Navigate to the `css` folder.
